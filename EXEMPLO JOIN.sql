@@ -1,7 +1,7 @@
-﻿	SELECT pokemons.name 'Pokemon', categories.name 'Categoria' 
+﻿	
+	SELECT pokemons.name 'Pokemon', categories.name 'Categoria' 
 	FROM pokemons JOIN categories ON (categories.id = pokemons.id_categoryI) 
 	WHERE pokemons.name = 'Bulbasaur';
- 
  
  
 	SELECT categories.name 'Categoria', pokemons.name 'Pokemon' 
@@ -12,4 +12,8 @@
 	SELECT COUNT(pokemons.id) 'Quantidade de pokemons Bug' 
 	FROM categories JOIN pokemons ON (pokemons.id_categoryI = categories.id) 
 	WHERE categories.name = 'Bug';
+
+	SELECT COUNT(pokemons.id) 'Quantidade de pokemons Bug' 
+	FROM categories JOIN pokemons ON (pokemons.id_categoryI = categories.id) 
+	GROUP BY categories.name;
 
