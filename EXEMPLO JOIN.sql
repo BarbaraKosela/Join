@@ -7,3 +7,9 @@
 	SELECT categories.name 'Categoria', pokemons.name 'Pokemon' 
 	FROM categories JOIN pokemons ON (categories.id = pokemons.id_categoryI) 
 	WHERE categories.name = 'Poison' ORDER BY categories.name, pokemons.name; 
+	
+	
+	SELECT COUNT(pokemons.id) 'Quantidade de pokemons Bug' 
+	FROM categories JOIN pokemons ON (pokemons.id_categoryI = categories.id) 
+	WHERE categories.name = 'Bug';
+
