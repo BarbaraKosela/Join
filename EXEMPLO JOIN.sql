@@ -13,7 +13,7 @@
 	FROM categories JOIN pokemons ON (pokemons.id_categoryI = categories.id) 
 	WHERE categories.name = 'Bug';
 
-	SELECT COUNT(pokemons.id) 'Quantidade de pokemons Bug' 
+	SELECT categories.name, COUNT(pokemons.id) 'Quantidade de pokemons' 
 	FROM categories JOIN pokemons ON (pokemons.id_categoryI = categories.id) 
-	GROUP BY categories.name;
+	GROUP BY categories.name ORDER BY COUNT(pokemons.id) DESC;
 
